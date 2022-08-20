@@ -1,0 +1,68 @@
+
+
+# List_A = [3,7,2,9,1,5,6,4,8]
+
+# def bobble_sort(_list:list,reverse = False):
+#     if reverse:
+#         for i in range(len(_list)-1):
+#             for j in range(len(_list)-1 -i):
+#                 if _list[j] < _list[j + 1]:
+#                     tmp = _list[j]
+#                     _list[j] = _list[j + 1]
+#                     _list[j + 1] = tmp
+
+#     else:
+#         for i in range(len(_list)-1):
+#             for j in range(len(_list)-1 -i):
+#                 if _list[j] > _list[j+1]:
+#                     tmp = _list[j]
+#                     _list[j] = _list[j+1]
+#                     _list[j+1] = tmp
+
+# a = list(input())
+# for i in range(len(a)):
+#     a[i] = int(a[i])
+
+# bobble_sort(a,reverse=True)
+# for i in a:
+#     print(i,end = '')
+
+
+# def solution(array,commands):
+#     i, j, k = [], [], []
+#     answer = []
+#
+#     for x in range(len(commands)):
+#         i.append(commands[x][0])
+#         j.append(commands[x][1])
+#         k.append(commands[x][2])
+#
+#     for y in range(len(commands)):
+#         parts = array[i[y]-1: j[y]]
+#         parts.sort()
+#         answer.append(parts[k[y]-1])
+#
+#     return answer
+# array = [1, 5, 6, 3, 7, 4]
+# commands = [[2,5,3],[4,4,1],[1,7,3]]
+
+
+
+# def solution(citations):
+#     answer = 0
+#     citations.sort()
+# 
+#     for h in range(1,len(citations)+1):
+#         cnt_h = 0
+#         cnt_l = 0
+#         for i in citations:
+#             if i >= h:
+#                 cnt_h += 1
+#             elif i <= h:
+#                 cnt_l += 1
+#             if cnt_h >= h and cnt_l <= h and answer < h:
+#                 answer = h
+#     return answer
+# 
+# c = [3, 0, 6, 1, 5]
+# print(solution(c))
